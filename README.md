@@ -38,7 +38,7 @@ The proposed framework consists of three main components:
 - Each RGB image is paired with its corresponding spectral record using a unique image identifier.
 
 Dataset access:
-- **Dataset link**: https://doi.org/XXXXXXXX  
+- **Dataset link**: https://drive.google.com/drive/folders/193fcDUGWJRFBk7V7qC86p5gMPbxly09_?usp=drive_link
 - **License**: Research and academic use only
 
 ---
