@@ -1,47 +1,61 @@
- AI-Driven Smart Gardening: Plant Health Detection
+# Multimodal UAV-Based AI Framework for Precision Plant Health Monitoring in Green Campuses
 
-This project implements a multimodal deep learning system for plant health detection using drone-based RGB images and spectral imaging data. The goal is to automatically classify plants as Healthy or Unhealthy and support precision agriculture for sustainable gardening.
+This repository contains the official implementation of the research work submitted to **The Visual Computer (Springer)** titled:
 
-Dataset
-- **RGB Images:** 3024×4032 px per sample  
-- **Spectral Data:** 18 bands, ranging from 410 nm to 940 nm  
-- **Labels:** Binary (Healthy / Unhealthy)  
-- **Mapping:** Each RGB image has a unique ID that corresponds to its spectral reading
+**Multimodal UAV-Based AI Framework for Precision Plant Health Monitoring in Green Campuses**
 
--  Methodology
-
-### Feature Extraction
-- **Spectral Data Encoder**
-  - Autoencoder (encoder-only)  
-  - Compressed to **32-dimensional latent features**
-
-- **Image Data Encoder**
-  - Pretrained **ResNet-18 CNN**  
-  - Extracted **512-dimensional image features**
-
-- **Fusion Model**
-  - Concatenated **32-dim spectral + 512-dim image features**  
-  - Passed through fully connected layers for binary classification  
-
-## Preprocessing
-- **Image Augmentations:**
-  - Resize, Normalization  
-  - Random Flip, Rotation, Color Jitter  
-
-- **Dataset Split:**
-  - 60% Training, 40% Validation  
+The work presents a UAV-driven multimodal deep learning framework that integrates multispectral reflectance data and RGB imagery for accurate plant health assessment in urban green environments.
 
 ---
 
-## Training
-- **Optimizer:** Adam  
-- **Loss Function:** Binary Cross Entropy Loss (BCELoss)  
-- **Epochs:** 15  
+## Abstract
 
-## Results
+Monitoring plant health in urban green spaces is essential for sustainable city development, yet conventional inspection methods remain labor-intensive and subjective. This work presents a multimodal UAV-based AI framework that integrates multispectral reflectance data with high-resolution RGB imagery for automated plant health monitoring. An 18-band multispectral sensor (410–940 nm) and RGB images captured using an unmanned aerial vehicle are used to collect complementary physiological and visual plant information. Spectral features are learned using an autoencoder-based encoder, while visual features are extracted using a pretrained ResNet-18 model. These representations are fused through a dual-branch neural network for binary plant health classification. Experiments conducted on data collected from the Green Nirma University Campus achieve a classification accuracy of 98.8%, demonstrating the effectiveness of multimodal data fusion for scalable and precise urban smart gardening applications.
 
-- **Spectral Data Only:** ~98% Accuracy  
-- **Image Data Only:** ~94% Accuracy  
-- **Fusion Model:** Higher robustness and balanced performance
+---
 
-  
+## Methodology Overview
+
+The proposed framework consists of three main components:
+
+- **Multispectral Branch**  
+  An autoencoder-based encoder is used to learn compact and discriminative representations from 18-band multispectral reflectance data.
+
+- **RGB Image Branch**  
+  A pretrained ResNet-18 model with frozen weights is employed to extract robust visual features from UAV-captured RGB images.
+
+- **Multimodal Fusion Network**  
+  Spectral and visual features are concatenated and passed through a fully connected fusion network to perform binary classification (Healthy / Unhealthy).
+
+
+
+## Dataset Description
+
+- **Sensor**: 18-band multispectral spectrometer (410–940 nm)  
+- **Imaging**: High-resolution RGB images captured via UAV  
+- **Environment**: Green Nirma University Campus  
+- **Labels**: Binary (Healthy, Unhealthy)  
+- Each RGB image is paired with its corresponding spectral record using a unique image identifier.
+
+Dataset access:
+- **Dataset link**: https://doi.org/XXXXXXXX  
+- **License**: Research and academic use only
+
+---
+
+## Experimental Results
+
+- **Task**: Binary plant health classification  
+- **Best Accuracy**: 98.8%  
+- **Evaluation Metrics**:
+  - Accuracy  
+  - Precision  
+  - Recall  
+  - F1-score  
+  - Matthews Correlation Coefficient (MCC)  
+  - Balanced Accuracy  
+  - Confusion Matrix  
+
+The results demonstrate the advantage of multimodal fusion over unimodal approaches under real-world conditions.
+
+
