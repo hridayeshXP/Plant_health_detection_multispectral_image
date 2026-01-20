@@ -41,7 +41,7 @@ Dataset
 ## Results
 
 - **Spectral Data Only:** ~98% Accuracy  
-- **Image Data Only:** ~93% Accuracy  
+- **Image Data Only:** ~94% Accuracy  
 - **Fusion Model:** Higher robustness and balanced performance
 
   
