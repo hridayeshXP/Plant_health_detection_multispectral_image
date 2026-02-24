@@ -1,9 +1,5 @@
 # Multimodal UAV-Based AI Framework for Precision Plant Health Monitoring in Green Campuses
 
-This repository contains the official implementation of the research work submitted to **The Visual Computer (Springer)** titled:
-
-**Multimodal UAV-Based AI Framework for Precision Plant Health Monitoring in Green Campuses**
-
 The work presents a UAV-driven multimodal deep learning framework that integrates multispectral reflectance data and RGB imagery for accurate plant health assessment in urban green environments.
 
 ---
